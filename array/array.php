@@ -18,7 +18,7 @@ echo '<br><br>';
 
 //----------------------------------------
 
-echo 'Afficher un element du tableau (l\'index d\'un tableau commence à 0)';
+echo $legumes[0]; 'Afficher un element du tableau (l\'index d\'un tableau commence à 0)';
 echo '<br>';
 echo 'Le fruit a la 1er position dans le tableau '.$fruits[0].'<br>';
 echo 'Le fruit a la 2eme position dans le tableau '.$fruits[1].'<br>';

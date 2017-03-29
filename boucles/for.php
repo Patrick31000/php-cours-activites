@@ -103,25 +103,26 @@ foreach ($vehiculeConcession as $gamme => $vehicule) {
 }
 echo '<br><br>';
 
-/*###############################################*/
-/*################# ACTIVITÉS ###################*/
-/*###############################################*/
+
+
 
 //----------------------------------------
 //Créer un tableau pour les mois de l'année et affiché tous les mois de Janvier à Décembre
 //modifier et/ou remplacer les éléments ci-dessous
-echo "8.Les mois depuis le debut de l'annee : <br>";
-$mois = [];
-for ($i = 0; $i < 0; $i) {
-    echo '';
+
+$mois = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+ echo "8.Les mois depuis le debut de l'annee : <br>";
+for ($i = 0; $i < count($mois); ++$i) {
+    echo $mois[$i].'<br>';
 }
 echo '<br><br>';
+
 
 //Afficher les mois de la fin de l'année jusqu'au début de l'année
 //modifier et/ou remplacer les éléments ci-dessous
 echo "9.Les mois depuis la fin de l'annee : <br>";
-for ($i = 0; $i < 0; $i) {
-    echo '';
+for ($i = 11; $i >= 0; --$i) {
+    echo $mois[$i].'<br>';
 }
 echo '<br><br>';
 //----------------------------------------
@@ -145,17 +146,36 @@ $college = array(
     array('Nom' => 'Johannson', 'Prenom' => 'Scarlett'),
     array('Nom' => 'Jackson', 'Prenom' => 'Samuel'),
   ),
+  'Troisième' => array(
+    array('Nom' => 'Bond', 'Prenom' => 'Jean'),
+    array('Nom' => 'Enerve', 'Prenom' => 'Sam'),
+  )
 );
 
 echo '10.Les eleves du college : <br>';
-//ajoutez votre code ici
+foreach ($college as $classe => $valeur) {
+    echo '<br>'.$classe.": ";
+    foreach ($valeur as $key => $value) {
+        foreach ($value as $nom => $prenom){
+    }
+        echo $value["Nom"].' '.$value["Prenom"].", ";
+    }
+}
+
 echo '<br><br>';
 
 //----------------------------------------
 //Afficher le nom et prénoms des élèves de ce collège
 //reprenez le tableau ci-dessus, ajoutez des éléves pour la classe de troisième et réaffichez tout
 echo '11.Les eleves du college (avec les nouveaux arrivants): <br>';
-//ajoutez votre code ici
+foreach ($college as $classe => $valeur) {
+    echo '<br>'.$classe.": ";
+    foreach ($valeur as $key => $value) {
+        foreach ($value as $nom => $prenom){
+    }
+        echo $value["Nom"].' '.$value["Prenom"].", ";
+    }
+}
 echo '<br><br>';
 
 //----------------------------------------
@@ -193,10 +213,50 @@ $videotheque = array(
       	'Henry Fonda','Martin Balsam','John Fiedler','Lee J. Cobb','E.G. Marshall',
     ),
   ),
+  array(
+    'nom' => 'Le Parrain',
+    'date' => 1972,
+    'realisateur' => 'Francis Ford Coppola',
+     'synopsis' => "Il s'agit d'une adaptation du roman éponyme de Mario Puzo. L'histoire s'étale de 1945 à 1955, et se centre sur l'ascension de Michael Corleone (Al Pacino), perçu comme ne pouvant prétendre à la succession d'une famille mafieuse impitoyable, la famille Corleone, dominé par son père, le patriarche Vito Corleone (Marlon Brando).",
+    'acteurs' => array(
+      	'Marlon Brando','Al Pacino','James Caan','Robert Duval','Diane Keaton',
+    ),
+  ),
+  array(
+    'nom' => 'Scarface',
+    'date' => 1984,
+    'realisateur' => 'Brian De Palma',
+    'synopsis' => "Scarface est un film américain réalisé par Brian De Palma, sorti en 1983. Remake actualisé du Scarface de Howard Hawks sorti en 1932, il met en vedette Al Pacino dans le rôle de Tony Montana, petit gangster cubain émigré aux États-Unis qui va devenir au fil du temps l'un des plus grands trafiquants de drogue.",
+    'acteurs' => array(
+      	'Al Pacino','Steven Bauer','Michelle Pfeiffer',
+    ),
+  ),
+  array(
+    'nom' => 'Heat',
+    'date' => 1995,
+    'realisateur' => 'Michael Mann',
+    'synopsis' => "Heat ou Tension au Québec est un film américain réalisé par Michael Mann, sorti en 1995. Le film a pour acteurs principaux Robert De Niro et Al Pacino, dans les rôles respectifs d'un chef d'une équipe de braqueurs professionnels et d'un lieutenant de police opiniâtre qui se livrent une lutte à distance et voient leurs vies privées et professionnelles se lier inéluctablement. Il s'agit du remake de L.A. Takedown, un téléfilm de Michael Mann datant de 1989.",
+    'acteurs' => array(
+      	'Robert De Niro','Al Pacino','Val Kilmer','Tom Sizemore',
+    ),
+  )
 );
 
+
+
 echo '12.Mes films : <br>';
-//ajoutez votre code ici
+foreach ($videotheque as $array => $value){
+  foreach ($value as $key => $info){
+    if (!is_array($info)){
+    echo $key.': '.$info.', ';
+    }
+    else {
+    foreach ($info as $acteurs) {
+      echo $key.' '.$acteurs.' <br>';
+    }
+    }
+  }
+}
 echo '<br><br>';
 
 //----------------------------------------

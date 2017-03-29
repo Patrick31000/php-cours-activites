@@ -37,7 +37,7 @@ $couleur = "Marron";
 $yeux = "Vert";
 
 /** remplacer le chiffre 0 par les bonnes conditions **/
-if( 0 ){
+if($animal == "Chat" && $vivant && $couleur = "Marron" && $yeux = "Vert"){
   echo 'Oui';
 }else {
   echo 'Non';
@@ -57,7 +57,7 @@ $couleur = "Blanc";
 $yeux = "Vert";
 
 /** remplacer le chiffre 0 par les bonnes conditions **/
-if( 0 ){
+if(($animal == "Chat" && $vivant && $couleur = "Marron" && $yeux = "Vert")||($animal == "Chat" && $vivant && $couleur = "Blanc" && $yeux = "Vert")){
   echo 'Oui';
 }else {
   echo 'Non';
@@ -77,7 +77,7 @@ $couleur = "Noir";
 $yeux = "Vert";
 
 /** remplacer le chiffre 0 par les bonnes conditions **/
-if( 0 ){
+if(($animal == "Chien" && $couleur = "Noir" && $yeux = "Vert")||($animal == "Chat" && $vivant && $couleur = "Orange" && $yeux = "Bleu")||($animal == "Chien" && $vivant && $couleur = "Marron" && $yeux = "Bleu")){
   echo 'Oui';
 }else {
   echo 'Non';
